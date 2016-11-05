@@ -3,6 +3,10 @@
 
 body {
   font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #ffeded;
 }
 
 nav {
@@ -11,35 +15,98 @@ nav {
   left: 0;
   right: 0;
   padding: 1em;
-  background: black;
-  color: white;
+  background: #000;
+  color: #FFF;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
 main {
-  margin-top: 69px;
+  margin-top: 7vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  background: grey;
+  overflow: scroll;
+  height: 93vh;
 }
 
+main.sidebar-showing {
+  width: 70%;
+}
+
+section {
+  padding: 2em;
+}
+
+button {
+  position: fixed;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: #FFF;
+  font-size: 23px;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+button.toggle {
+  right: 10px;
+  background: #d3005d;
+}
+
+button.merge {
+  left: 10px;
+  background: #d796a2;
+}
+
+button.go {
+  position: relative;
+  background: #78a778;
+}
+
+.item-output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-output span {
+  margin: 10px 5px;
+}
 
 .search-form {
+  position: relative;
+}
+
+.search-form i {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  color: #d3005d;
 
 }
 
-input {
+.search-form input {
   border: none;
   padding: .5em;
   border-radius: 2px;
+  outline: none;
 }
 
 .sidebar {
   background: lightgrey;
-  width: 300px;
+  width: 30%;
   text-align: center;
   position: fixed;
-  top: 69px;
+  top: 56px;
   bottom: 0;
   right: 0;
   display: none;
@@ -47,4 +114,48 @@ input {
 
 .sidebar.showing {
   display: block;
+}
+
+.performance-output {
+  background: white;
+  position: fixed;
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -50%);
+  padding: .5em;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 3px 3px 20px #844242;
+  display: none;
+}
+
+.performance-output.showing {
+  display: block;
+}
+
+.welcome-modal {
+  position: fixed;
+  z-index: 99;
+  width: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFF;
+  border: none;
+  padding: 2em;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 3px 3px 20px #844242;
+}
+
+.welcome-modal {
+  transition: all 0.5s ease-in-out;
+}
+
+.welcome-modal p {
+  padding: .5em 0;
+}
+
+.welcome-modal.hidden {
+  transform: translate3d(0, 1000%, 0);
 }
