@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  background: black;
+  color: white;
+}
+
+main {
+  margin-top: 69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: grey;
+}
+
+
+.search-form {
+
+}
+
+input {
+  border: none;
+  padding: .5em;
+  border-radius: 2px;
+}
+
+.sidebar {
+  background: lightgrey;
+  width: 300px;
+  text-align: center;
+  position: fixed;
+  top: 69px;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+.sidebar.showing {
+  display: block;
+}
